@@ -1,0 +1,25 @@
+// colors
+
+$black: #000000;
+$dark-grey: #333333;
+$grey: #9b9b9b;
+$light-grey: #e7e7e7;
+$white: #ffffff;
+$cherry: #c3262c;
+$violet: #c1a4f5;
+$pastel-green: #f4f4f5;
+$pastel-green--dark: #ebebee;
+$cream: #e1d1b2;
+
+// root
+
+:root {
+    --black: #{$black};
+    --grey: #{$grey};
+    --light-grey: #{$light-grey};
+    --white: #{$white};
+    --cherry: #{$cherry};
+    --violet: #{$violet};
+    --pastel-green: #{$pastel-green};
+    --cream: #{$cream};
+}

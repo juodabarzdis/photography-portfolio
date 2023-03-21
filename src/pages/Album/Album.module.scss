@@ -1,0 +1,46 @@
+.album-container {
+    display: flex;
+    position: relative;
+
+    @media screen and (max-width: 800px) {
+        flex-direction: column;
+    }
+}
+
+.album-description {
+    flex: 1;
+    position: fixed;
+    width: 30rem;
+    left: 1rem;
+    padding: 1rem;
+
+    @media screen and (max-width: 800px) {
+        width: 100%;
+        position: relative;
+        left: 0;
+        padding: 4rem 2rem;
+    }
+}
+
+
+.album-images {
+    margin-left: 35rem;
+    flex: 1;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: 800px) {
+        margin-left: 50rem;
+    }
+
+    @media screen and (max-width: 800px) {
+        margin-left: 0;
+    }
+
+    &__image {
+        max-width: 80rem;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

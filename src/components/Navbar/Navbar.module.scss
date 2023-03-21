@@ -1,0 +1,141 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 16rem;
+    padding: 2rem;
+}
+
+.logo-container {
+    cursor: pointer;
+
+    &__logo {
+        width: 16rem;
+        height: 16rem;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+// .nav-links {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     height: 100%;
+//     margin: 0;
+//     padding: 0;
+
+//     &__link {
+//         color: $grey;
+//         margin: 0 2rem;
+//         padding: 0;
+//         font-size: 1.6rem;
+//         font-weight: 600;
+//         text-transform: uppercase;
+//         letter-spacing: 0.2rem;
+//         cursor: pointer;
+//         transition: all 0.2s;
+
+//         &:hover {
+//             color: $black;
+//         }
+
+//         &--active {
+//             color: $black;
+//         }
+//     }
+// }
+
+.burger-menu {
+    display: none;
+    top: 2rem;
+    right: 2rem;
+    z-index: 20;
+    cursor: pointer;
+
+    &__line {
+        top: 0;
+        background-color: $dark-grey;
+        width: 4rem;
+        height: 0.3rem;
+        margin-bottom: 0.9rem;
+        z-index: 20;
+        transition: all 0.2s ease-in-out;
+
+        &--open {
+            &:nth-child(1) {
+                transform: rotate(45deg) translate(0.7rem, 0.7rem);
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+            }
+
+            &:nth-child(3) {
+                transform: rotate(-45deg) translate(1rem, -1rem);
+            }
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        display: block;
+    }
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    &__link {
+        color: $grey;
+        margin: 0 2rem;
+        font-size: 1.6rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        @media screen and (max-width: 900px) {
+            font-size: 2rem;
+        }
+
+        &:hover {
+            color: $dark-grey;
+        }
+
+        &--active {
+            color: $black;
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        position: absolute;
+        flex-direction: column;
+        height: 100vh;
+        padding: 8rem 2rem 4rem 2rem;
+        top: 0;
+        right: 0;
+        width: 80%;
+        visibility: hidden;
+        opacity: 0;
+        background-color: $white;
+        transition: all 0.2s ease-in-out;
+        z-index: 10;
+
+        &>li {
+            margin: 2rem 0;
+        }
+
+        &--open {
+            visibility: visible;
+            height: 100%;
+            width: 100%;
+            opacity: 1;
+        }
+    }
+}

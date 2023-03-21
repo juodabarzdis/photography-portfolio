@@ -1,0 +1,50 @@
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("/font/Proxima-Nova.otf") format("opentype");
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 1.4rem;
+    color: $black;
+    background-color: $white;
+    margin: 0;
+}
+
+.resize-animation-stopper * {
+    animation: none !important;
+    transition: none !important;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $grey;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    line-height: 1.5;
+}
+
+button {
+    font-family: "Proxima Nova", sans-serif;
+}
