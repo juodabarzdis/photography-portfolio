@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../../components/card/Card";
+import Card from "../../components/Card/Card";
 import styles from "./Home.module.scss";
 import { Link } from "react-router-dom";
 import { Masonry } from "@mui/lab";
