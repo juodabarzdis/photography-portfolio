@@ -1,6 +1,6 @@
 import styles from "./About.module.scss";
 import { motion } from "framer-motion";
-import Image from "../../assets/About.jpg";
+import Image from "../../assets/about.jpg";
 
 const About = () => {
   return (
