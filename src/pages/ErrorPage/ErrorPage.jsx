@@ -1,6 +1,6 @@
 import styles from "./ErrorPage.module.scss";
 import { useRouteError } from "react-router-dom";
-import OopsImg from "../../assets/Oops.svg";
+import OopsImg from "../../assets/Oops.png";
 
 const ErrorPage = () => {
   const error = useRouteError();

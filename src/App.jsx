@@ -9,6 +9,7 @@ import { AnimatePresence } from "framer-motion";
 
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import NavBar from "./components/Navbar/Navbar";
+import Loading from "./components/Loading/Loading";
 
 import routes from "./components/App/routes";
 
@@ -32,7 +33,7 @@ const App = () => {
               key={path}
               path={path}
               element={
-                <Suspense fallback={<div>Loading...</div>}>
+                <Suspense fallback={<Loading />}>
                   <LazyRouteComponent />
                 </Suspense>
               }

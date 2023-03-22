@@ -8,7 +8,6 @@
 }
 
 .album-description {
-    flex: 1;
     position: fixed;
     width: 30rem;
     left: 1rem;
@@ -24,23 +23,19 @@
 
 
 .album-images {
+    width: 70%;
     margin-left: 35rem;
-    flex: 1;
-    overflow: auto;
     display: flex;
-    flex-direction: column;
 
     @media screen and (max-width: 800px) {
-        margin-left: 50rem;
-    }
-
-    @media screen and (max-width: 800px) {
+        width: 100%;
         margin-left: 0;
     }
 
     &__image {
         max-width: 80rem;
         width: 100%;
-        margin-bottom: 10px;
+        max-height: 100%;
+        margin: 1rem;
     }
 }

@@ -8,18 +8,17 @@ import { v4 as uuidv4 } from "uuid";
 import data from "../../data/data";
 
 const Home = () => {
-  console.log(data);
   return (
-    <div>
+    <section className={styles["images-section"]}>
       <Masonry
         columns={{
           xs: 1,
           sm: 2,
           md: 3,
           lg: 4,
-          xl: 5,
         }}
         spacing={2}
+        style={{ margin: 0 }}
       >
         {data.map((item, i) => (
           <motion.div
@@ -29,12 +28,12 @@ const Home = () => {
             key={uuidv4()}
           >
             <Link to={`/album/${item.id}`}>
-              <Card image={item.images[0]} />
+              <Card image={item.images[0]} title={item.title} />
             </Link>
           </motion.div>
         ))}
       </Masonry>
-    </div>
+    </section>
   );
 };
 

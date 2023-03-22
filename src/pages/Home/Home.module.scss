@@ -1,7 +1,9 @@
 .images-section {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    gap: 1rem;
     width: 100%;
+    padding: 1rem;
+    margin: 0 auto;
+
+    @media screen and (max-width: 800px) {
+        padding: 0;
+    }
 }

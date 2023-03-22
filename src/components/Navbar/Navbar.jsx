@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Logo from "../../assets/Logo.svg";
+import Logo from "../../assets/Logo.png";
 import classNames from "classnames";
 import styles from "./Navbar.module.scss";
 
@@ -7,10 +7,6 @@ import { NavLink, Outlet } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const openHandler = () => {
-    isOpen && setIsOpen(false);
-  };
 
   useEffect(() => {
     if (isOpen) {

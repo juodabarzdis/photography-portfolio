@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./Album.module.scss";
 import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Masonry } from "@mui/lab";
 
 import data from "../../data/data";
 
@@ -29,7 +30,7 @@ const Album = () => {
       exit={{ opacity: 0 }}
     >
       <div className={styles["album-description"]}>
-        <h1 className={styles["album-description__title"]}>Album Title</h1>
+        <h1 className={styles["album-description__title"]}>{album?.title}</h1>
         <p className={styles["album-description__text"]}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
           voluptates, quod, quia, voluptate quae voluptatem quibusdam voluptatum
@@ -38,14 +39,23 @@ const Album = () => {
         </p>
       </div>
       <div className={styles["album-images"]}>
-        {album &&
-          album.images?.map((image) => (
-            <img
-              className={styles["album-images__image"]}
-              src={image}
-              alt="album"
-            />
-          ))}
+        <Masonry
+          columns={{
+            xs: 1,
+            lg: 2,
+          }}
+          spacing={2}
+          style={{ margin: 0 }}
+        >
+          {album &&
+            album.images?.map((image) => (
+              <img
+                className={styles["album-images__image"]}
+                src={image}
+                alt="album"
+              />
+            ))}
+        </Masonry>
       </div>
     </motion.div>
   );
